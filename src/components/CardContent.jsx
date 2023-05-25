@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
+import fetchData from './apiConsumption.js';
+let characterCount = 1;
 
 const ShowCharacter = () => {
-    const url = 'https://swapi.dev/api/people/1/';
-    const [character, setCharacter] = useState(null);
-
-    const fetchData = async (apiUrl) => {
-        try {
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error fetching character:', error);
-        }
-    };
+    const [character, setCharacter] = useState([]);
 
     const showCharacter = async () => {
+        const url = 'https://swapi.dev/api/people/1/';
         const data = await fetchData(url);
+        console.log(data)
         setCharacter(data);
     };
 
-    showCharacter();
+    const nextCharacter = async () => {
+        const data = await fetchData(`https://swapi.dev/api/people/${characterCount += 1}/`);
+        console.log(data)
+        setCharacter(data);
+    }
 
-    if (character === null) {
-        return <div>Cargando...</div>;
+    if (character.length === 0) {
+        showCharacter();
     }
 
     return (
@@ -30,6 +27,8 @@ const ShowCharacter = () => {
             <h3>Name: {character.name}</h3>
             <p>Height: {character.height}</p>
             <p>Gender: {character.gender}</p>
+
+            <button onClick={nextCharacter}>next character</button>
         </div>
     );
 };

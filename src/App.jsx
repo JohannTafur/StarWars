@@ -1,9 +1,11 @@
-import ShowCharacter from "./components/CardContent";
+// import ShowCharacter from "./components/CardContent";
+import Background from "./components/cardBackground";
 
 function App() {
 
   return (
-    <ShowCharacter />    
+    // <ShowCharacter />   
+    <Background />
   );
 }
 

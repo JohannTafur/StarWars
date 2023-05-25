@@ -1,21 +1,13 @@
-import '../img/backgroundStarWars.jpg'
-
-const style = {
-    CardBackground:{
-        background: "black",
-        height: "10%",
-        widht: "10%"        
-    }
-}
+import background from '../img/backgroundStarWars.jpg'
 
 const Background = () => {
 
     return (
-        <div style = {style.CardBackground}>
+        <div>
             <div >
 
             </div>
-            <img src="../img/backgroundStarWars.jpg" alt="" />
+            <img class="backgroundStarWars" src={background} alt="" />
         </div>
     )
 }

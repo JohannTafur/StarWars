@@ -1,8 +1,11 @@
-const  api = async () => {
-    const response = await fetch('https://swapi.dev/api/people/1/')
-    const data = await response.json();
-    console.log(data)
-    return data
-}
+const fetchData = async (apiUrl) => {
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching character:', error);
+    }
+};
 
-api()
+export default fetchData
