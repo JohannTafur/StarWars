@@ -1,13 +1,13 @@
-import background from '../img/backgroundStarWars.jpg'
+import ShowCharacter from './CardContent'
+import '../css/style.css'
 
 const Background = () => {
 
     return (
-        <div>
-            <div >
-
-            </div>
-            <img class="backgroundStarWars" src={background} alt="" />
+        <div className='StarWars-Card'>
+            <div className='StarWars-Content'>
+                <ShowCharacter />
+            </div>            
         </div>
     )
 }

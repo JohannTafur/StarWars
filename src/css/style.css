@@ -1,0 +1,50 @@
+body {
+    background-image: url(../img/Túnez\ ASUS\ 3664\ Mos\ Espa.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.StarWars-Card {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.StarWars-Content {
+    display: flex;
+    background: rgb(255, 255, 255);
+    color: rgb(185, 200, 181);
+    padding: 3%;    
+    border-radius: 18px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.37);
+}
+
+.StarWars-Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StarWars-Img img {
+    width: 60%;
+}
+
+button {
+    background: white;
+    background-size: cover;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.37);
+}
+
+button img {
+    width: 90%;
+    height: auto;
+    border-radius: 100%;
+}
